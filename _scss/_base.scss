@@ -1,0 +1,49 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  color: $white;
+  background: $black;
+  font-family: "PT Sans", sans-serif;
+  min-width: 320px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: rgba($white, 0.9);
+  transition: color 0.2s linear;
+}
+
+a {
+  &:active,
+  &:visited {
+    color: inhreit;
+  }
+
+  &:hover {
+    color: $red;
+    transition: color 0.2s linear;
+  }
+}
+
+img {
+  vertical-align: top;
+}
+
+.clearfix {
+  zoom: 1;
+  &:before { content: ''; display: block; }
+  &:after { content: ''; display: table; clear: both; }
+}
