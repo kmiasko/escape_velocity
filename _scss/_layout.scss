@@ -1,0 +1,138 @@
+$move: 200px;
+
+.wrapper {
+  transform: translateX(0);
+  backface-visibility: hidden;
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+header {
+  background: url('../images/header.jpg') no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  padding: 6em 1em;
+
+  h1 {
+    font-size: font-size(1);
+    font-weight: 700;
+    letter-spacing: 0.2em;
+  }
+
+  h2 {
+    font-size: font-size(-1);
+    letter-spacing: 0.2em;
+    color: rgba(255,255,255,0.5);
+  }
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 15em;
+  height: 100%;
+  background: $black;
+  transform: translateX(-$move);
+  backface-visibility: hidden;
+  transition: transform 0.3s;
+
+  ul {
+    margin-top: font-size(3);
+  }
+
+  a {
+    display: block;
+    width: 90%;
+    border-bottom: 1px solid rgba(255,255,255, 0.05);
+    font-weight: 300;
+    padding: 0.5em 2em;
+    margin: 0 auto;
+    font-size: font-size(-1);
+    letter-spacing: 0.12em;
+
+  }
+}
+
+section {
+  position: relative;
+  padding: font-size(4) 1em;
+
+  h1, h2, h3, p {
+    margin-top: 0;
+  }
+}
+
+.introduction {
+  padding-left: 2.2em;
+  padding-right: 2.2em;
+  background: url('../images/overlay.png') repeat, $red;
+
+  p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: font-size(3);
+  }
+
+  strong, em, a {
+    color: rgba(255, 255, 255, 1);
+  }
+
+  h2 {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    font-size: font-size(1);
+    font-weight: 700;
+    padding: 1em;
+    letter-spacing: 0.1em;
+    margin-bottom: font-size(3);
+  }
+
+}
+
+.details {
+  background: $white;
+  color: $black;
+
+  p {
+    color: rgba($black, 0.7);
+  }
+
+  strong, em{
+    color: rgba($black, 1);
+  }
+
+  h3 {
+    color: $red;
+  }
+
+}
+
+.endorsements {
+  background: url('../images/overlay.png') repeat, $light-gray;
+  color: rgba(0,0,0,0.6);
+
+  h3 > a {
+    color: $red;
+  }
+}
+
+.rest {
+  background: url('../images/overlay.png') repeat, $black;
+}
+
+.navbar-open {
+  .wrapper {
+    transform: translateX($move);
+    transition: transform 0.3s;
+  }
+
+  nav {
+    transform: translateX(0);
+    transition: transform 0.3s;
+  }
+
+  .hamburger {
+    transform: translateX($move);
+    transition: transform 0.3s;
+  }
+}

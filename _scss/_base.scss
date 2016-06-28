@@ -11,7 +11,7 @@ html {
 body {
   color: $white;
   background: $black;
-  font-family: "PT Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   min-width: 320px;
 }
 
@@ -46,4 +46,90 @@ img {
   zoom: 1;
   &:before { content: ''; display: block; }
   &:after { content: ''; display: table; clear: both; }
+}
+
+.hamburger {
+  position: fixed;
+  left: 1em;
+  top: 1em;
+  z-index: 1000;
+  transform: translateX(0);
+  transition: transform 0.3s;
+
+  i {
+    background: rgba(255,255,255,0.2);
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    cursor: pointer;
+  }
+}
+
+.section-name {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: inherit;
+    padding: 1em 3em;
+    text-transform: uppercase;
+    font-size: 0.75019em;
+    letter-spacing: 0.2em;
+    top: -21px;
+    width: 20em;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 28px;
+    background: url(../images/shadow.png);
+    background-size: 100% 100%;
+    left: -15px;
+    top: 20px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 28px;
+    transform: scaleX(-1);
+    background: url(../images/shadow.png);
+    background-size: 100% 100%;
+    right: -15px;
+    top: 20px;
+  }
+}
+
+.btn {
+  display: block;
+  color: $white;
+  width: 100%;
+  border-radius: 5px;
+  padding: font-size(-1) 0;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  max-width: 30em;
+  margin: 1em auto;
+}
+
+.btn-dark {
+  background: $black;
+}
+
+.btn-red {
+  background: $red;
+  color: $white;
+}
+
+.btn-white {
+  background: $white;
+  color: rgba(0,0,0,0.5);
+  border: 1px solid rgba(0,0,0,0.3);
+}
+
+.btn-empty {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.3);
 }
