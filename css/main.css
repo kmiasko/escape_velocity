@@ -2897,6 +2897,14 @@ section {
   .wrapper {
     position: relative; }
 
+  .button-list {
+    margin: 0 auto;
+    max-width: 30em; }
+
+  .input-list {
+    margin: 0 auto;
+    max-width: 30em; }
+
   nav {
     position: absolute;
     top: 1em;
@@ -2939,7 +2947,7 @@ section {
       top: 50px; }
 
   .btn {
-    width: 12em;
+    width: 11em;
     padding: 1em 0;
     margin: 2em auto;
     display: inline-block; }
@@ -2997,9 +3005,10 @@ section {
     font-size: 1em; }
   .rest form input:not([type="submit"]) {
     float: left;
-    width: 45%; }
-    .rest form input:not([type="submit"]):first-of-type {
-      margin-right: 1em; }
+    width: 48%;
+    max-width: 15em; }
+    .rest form input:not([type="submit"]):first-child {
+      margin-right: 0.5em; }
   .rest .tile {
     width: 50%;
     float: left; }

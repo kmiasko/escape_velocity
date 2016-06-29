@@ -248,6 +248,16 @@ section {
     position: relative;
   }
 
+  .button-list {
+    margin: 0 auto;
+    max-width: 30em;
+  }
+
+  .input-list {
+    margin: 0 auto;
+    max-width: 30em;
+  }
+
   nav {
     position: absolute;
     top: 1em;
@@ -303,7 +313,7 @@ section {
   }
 
   .btn {
-    width: 12em;
+    width: 11em;
     padding: font-size(0) 0;
     margin: 2em auto;
     display: inline-block;
@@ -404,12 +414,14 @@ section {
     }
 
     form {
-      input:not([type="submit"]) {
-        float: left;
-        width: 45%;
 
-        &:first-of-type {
-          margin-right: 1em;
+     input:not([type="submit"]) {
+        float: left;
+        width: 48%;
+        max-width: 15em;
+
+        &:first-child {
+          margin-right: 0.5em;
         }
       }
     }
