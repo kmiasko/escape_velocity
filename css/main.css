@@ -2647,7 +2647,8 @@ img {
   font-size: 0.75019em;
   letter-spacing: 0.2em;
   top: -21px;
-  width: 20em; }
+  width: 20em;
+  z-index: 100; }
   .section-name::before {
     content: "";
     position: absolute;
@@ -2724,6 +2725,10 @@ img {
     margin-left: 3.15733em; }
   .tile:last-of-type {
     margin-bottom: 3em; }
+
+.content {
+  width: 100%;
+  background: inherit; }
 
 .wrapper {
   transform: translateX(0);
@@ -2882,5 +2887,131 @@ section {
 .navbar-open .hamburger {
   transform: translateX(200px);
   transition: transform 0.3s; }
+
+@media screen and (min-width: 750px) {
+  .content {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto; }
+
+  .wrapper {
+    position: relative; }
+
+  nav {
+    position: absolute;
+    top: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40em;
+    z-index: 10;
+    background: none;
+    transition: none;
+    height: auto; }
+    nav ul {
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 10px;
+      text-align: center; }
+    nav li {
+      display: inline-block; }
+    nav a {
+      display: block;
+      text-decoration: none;
+      border: 0;
+      width: auto;
+      padding: 1.5em 1em; }
+
+  .hamburger {
+    display: none; }
+
+  .section-name {
+    font-size: 1em;
+    padding: 1.5em 4em 2em;
+    top: -50px; }
+    .section-name:before {
+      width: 15px;
+      height: 28px;
+      left: -15px;
+      top: 50px; }
+    .section-name:after {
+      width: 15px;
+      height: 28px;
+      right: -15px;
+      top: 50px; }
+
+  .btn {
+    width: 12em;
+    padding: 1em 0;
+    margin: 2em auto;
+    display: inline-block; }
+
+  header {
+    padding: 14em 0; }
+    header h1 {
+      font-size: 1.77689em; }
+    header h2 {
+      font-size: 1em; }
+
+  section {
+    padding: 4.20873em 3em 5.61023em; }
+
+  .introduction h2 {
+    font-size: 1.77689em; }
+  .introduction p {
+    font-size: 1.333em; }
+
+  .details h2 {
+    font-size: 1.77689em; }
+  .details > p {
+    font-size: 1.333em; }
+  .details .icon::before {
+    font-size: 1.77689em;
+    top: 0.5em; }
+  .details .tiles {
+    margin: 2.36859em auto 0; }
+  .details .tile {
+    float: left;
+    width: 45%;
+    padding: 2em;
+    margin: 0 1em; }
+    .details .tile:nth-of-type(1) {
+      border: 0; }
+    .details .tile:nth-of-type(2) {
+      border: 0; }
+
+  .endorsements .endorsement {
+    float: left;
+    width: 33.333%;
+    padding: 0 1em; }
+
+  .rest h2 {
+    font-size: 2.36859em; }
+  .rest p {
+    font-size: 1.333em; }
+  .rest form, .rest .social {
+    width: 50%;
+    float: left;
+    padding: 3em 1em 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 0; }
+  .rest .social p {
+    font-size: 1em; }
+  .rest form input:not([type="submit"]) {
+    float: left;
+    width: 45%; }
+    .rest form input:not([type="submit"]):first-of-type {
+      margin-right: 1em; }
+  .rest .tile {
+    width: 50%;
+    float: left; }
+    .rest .tile:nth-of-type(1) {
+      border: 0; }
+    .rest .tile:nth-of-type(2) {
+      border: 0; }
+    .rest .tile p, .rest .tile h3 {
+      margin-left: 0;
+      padding-left: 3em; }
+
+  footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1); } }
 
 /*# sourceMappingURL=main.css.map */
