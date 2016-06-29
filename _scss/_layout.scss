@@ -30,7 +30,7 @@ nav {
   position: fixed;
   left: 0;
   top: 0;
-  width: 15em;
+  width: $move;
   height: 100%;
   background: $black;
   transform: translateX(-$move);
@@ -56,7 +56,7 @@ nav {
 
 section {
   position: relative;
-  padding: font-size(4) 1em;
+  padding: font-size(3) 1em font-size(5);
 
   h1, h2, h3, p {
     margin-top: 0;
@@ -70,7 +70,7 @@ section {
 
   p {
     color: rgba(255, 255, 255, 0.7);
-    margin-bottom: font-size(3);
+    margin-bottom: font-size(2);
   }
 
   strong, em, a {
@@ -83,8 +83,8 @@ section {
     font-size: font-size(1);
     font-weight: 700;
     padding: 1em;
-    letter-spacing: 0.1em;
-    margin-bottom: font-size(3);
+    letter-spacing: 0.05em;
+    margin-bottom: font-size(2);
   }
 
 }
@@ -93,8 +93,14 @@ section {
   background: $white;
   color: $black;
 
+  h2 {
+    font-size: font-size(1);
+    font-weight: 700;
+    margin: font-size(1) 0 font-size(0);
+  }
+
   p {
-    color: rgba($black, 0.7);
+    color: rgba($black, 0.6);
   }
 
   strong, em{
@@ -103,21 +109,108 @@ section {
 
   h3 {
     color: $red;
+    margin-bottom: font-size(1);
+    font-weight: 700;
   }
 
+  img {
+    width: 100%;
+    margin-bottom: font-size(2);
+  }
 }
 
 .endorsements {
   background: url('../images/overlay.png') repeat, $light-gray;
   color: rgba(0,0,0,0.6);
+  padding-bottom: font-size(4);
 
   h3 > a {
     color: $red;
+    text-decoration: none;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  .endorsement {
+    margin: 0 0 font-size(2) 0;
+
+    h3 {
+      font-size: font-size(1);
+      font-weight: 700;
+      margin: font-size(1) 0;
+    }
+
+    p {
+      margin-bottom: font-size(2);
+    }
+  }
+
+  .endorsement > a:not(.btn) {
+    border: 10px solid $white;
+    display: block;
+    margin-bottom: font-size(2);
   }
 }
 
 .rest {
-  background: url('../images/overlay.png') repeat, $black;
+  background: url('../images/overlay.png') repeat, $black2;
+  padding-bottom: font-size(2);
+
+  form {
+    margin-bottom: font-size(3);
+    input:not([type="submit"]), textarea {
+      max-width: 30em;
+      display: block;
+      margin: 0.5em auto;
+      width: 100%;
+      padding: font-size(-1);
+      border-radius: 10px;
+      border: 0;
+      outline: 0;
+      background: $gray;
+      -webkit-appearance: none;
+      transition: background 0.3s;
+    }
+
+    input:not([type="submit"]):focus,
+    textarea:focus {
+      background: $white;
+      transition: background 0.3s;
+    }
+
+    input[type="submit"] {
+      margin-top: 2em;
+    }
+  }
+
+  h2 {
+    font-size: font-size(1);
+    font-weight: 700;
+    margin-bottom: font-size(1);
+  }
+
+  p {
+    margin-bottom: font-size(2);
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .tile {
+
+    border-top: 1px solid rgba(255,255,255,0.1);
+
+    h3 {
+      color: $red;
+      font-size: font-size(0);
+      font-weight: 700;
+      margin-bottom: 1em;
+    }
+    a {
+      display: block;
+    }
+  }
 }
 
 .navbar-open {
