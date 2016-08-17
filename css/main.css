@@ -3004,8 +3004,8 @@ section {
   .rest .social p {
     font-size: 1em; }
   .rest form input:not([type="submit"]) {
-    float: left;
-    width: 48%;
+    display: inline-block;
+    width: 48.5%;
     max-width: 15em; }
     .rest form input:not([type="submit"]):first-child {
       margin-right: 0.5em; }
