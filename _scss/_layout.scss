@@ -416,8 +416,8 @@ section {
     form {
 
      input:not([type="submit"]) {
-        float: left;
-        width: 48%;
+        display: inline-block;
+        width: 48.5%;
         max-width: 15em;
 
         &:first-child {
